@@ -1,7 +1,7 @@
 export default [
   'button:enabled:not([readonly])',
   'select:enabled:not([readonly])',
-  'textarea:enabled:not([readonly])',
+  'textarea:enabled',
   'input:enabled:not([readonly])',
 
   'a[href]',

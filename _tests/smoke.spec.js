@@ -107,6 +107,18 @@ describe('smoke', () => {
         focusMerge(document.querySelector('#d1'), null).node.innerHTML
       ).to.be.equal("1");
     })
+
+    it('autofocus - should include readonly textarea', () => {
+      document.body.innerHTML = `
+        <div id="d1">
+        <textarea readonly>content</textarea>
+        </div>
+    `;
+      expect(
+        focusMerge(document.querySelector('#d1'), null).node.innerHTML
+      ).to.be.equal("content");
+    })
+
   });
 
 });
